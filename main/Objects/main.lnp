@@ -1,0 +1,9 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\delay.obj",
+".\Objects\ds18b20.obj",
+".\Objects\lcd12864.obj",
+".\Objects\ds1302.obj" 
+TO ".\Objects\main" 
+
+PRINT(".\Listings\main.map")

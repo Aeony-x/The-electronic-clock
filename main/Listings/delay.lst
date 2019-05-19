@@ -1,0 +1,42 @@
+C51 COMPILER V9.54   DELAY                                                                 05/10/2019 14:59:31 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE DELAY
+OBJECT MODULE PLACED IN .\Objects\delay.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE ..\delay\delay.c OMF2 OPTIMIZE(8,SPEED) BROWSE INCDIR(..\delay;..\ds18b2
+                    -0;..\lcd12864;..\ds1302) DEBUG PRINT(.\Listings\delay.lst) OBJECT(.\Objects\delay.obj)
+
+line level    source
+
+   1          #include "delay.h"
+   2          
+   3          void delay_ms(uint z)      //延时z毫秒 
+   4          {
+   5   1      uint x,y;
+   6   1      for(x=z;x>0;x--)
+   7   1        for(y=115;y>0;y--);
+   8   1      }
+   9          
+  10          //在系统晶振为12Mhz时延时计算式为（8*x+10）us
+  11          void delay(uint x) 
+  12          {
+  13   1              while(--x);
+  14   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     40    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
